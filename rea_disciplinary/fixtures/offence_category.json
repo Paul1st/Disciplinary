@@ -1,0 +1,50 @@
+[
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Offence Category",
+  "modified": "2026-03-10 13:11:58.192065",
+  "name": "Illegal Industrial Action",
+  "offence_category": "Illegal Industrial Action"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Offence Category",
+  "modified": "2026-03-10 13:12:29.851785",
+  "name": "Sexual Harassment",
+  "offence_category": "Sexual Harassment"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Offence Category",
+  "modified": "2026-03-10 13:12:53.512148",
+  "name": "Dishonest Conduct",
+  "offence_category": "Dishonest Conduct"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Offence Category",
+  "modified": "2026-03-10 13:13:22.876821",
+  "name": "Indiscipline/Disorderly Behaviour",
+  "offence_category": "Indiscipline/Disorderly Behaviour"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Offence Category",
+  "modified": "2026-03-10 13:13:51.140754",
+  "name": "Unsatisfactory Work Performance",
+  "offence_category": "Unsatisfactory Work Performance"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Offence Category",
+  "modified": "2026-03-10 13:14:17.315647",
+  "name": "Poor Timekeeping/Absenteeism",
+  "offence_category": "Poor Timekeeping/Absenteeism"
+ }
+]

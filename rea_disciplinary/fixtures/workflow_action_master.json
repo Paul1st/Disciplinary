@@ -1,0 +1,128 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-28 12:14:37.572577",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-28 12:14:37.575359",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-28 18:02:33.621432",
+  "name": "Supervisor Approval",
+  "workflow_action_name": "Supervisor Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-30 10:28:13.386414",
+  "name": "HOD approval",
+  "workflow_action_name": "HOD approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-08 10:24:20.028775",
+  "name": "Submit",
+  "workflow_action_name": "Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-08 14:46:09.344650",
+  "name": "Manager HR Approval",
+  "workflow_action_name": "Manager HR Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-16 12:16:30.907168",
+  "name": "Issue Warning",
+  "workflow_action_name": "Issue Warning"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-16 12:18:01.363645",
+  "name": "Recommend Charge",
+  "workflow_action_name": "Recommend Charge"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-16 12:35:43.159393",
+  "name": "Close Case",
+  "workflow_action_name": "Close Case"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-21 11:45:48.526170",
+  "name": "Submit Response",
+  "workflow_action_name": "Submit Response"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-21 15:24:12.718824",
+  "name": "Satisfactory and Not Dismissible",
+  "workflow_action_name": "Satisfactory and Not Dismissible"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-10-21 15:34:44.199439",
+  "name": "Non Satisfactory and Dismissible",
+  "workflow_action_name": "Non Satisfactory and Dismissible"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-12-10 15:42:35.011659",
+  "name": "Committee Appointed",
+  "workflow_action_name": "Committee Appointed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-18 10:19:37.408930",
+  "name": "Issue Charge",
+  "workflow_action_name": "Issue Charge"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-18 10:40:14.207571",
+  "name": "Accept Verdict",
+  "workflow_action_name": "Accept Verdict"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-18 10:40:26.271373",
+  "name": "Appeal Verdict",
+  "workflow_action_name": "Appeal Verdict"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-18 15:10:56.024172",
+  "name": "Invite Committee",
+  "workflow_action_name": "Invite Committee"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-09-10 12:46:38.719653",
+  "name": "Send",
+  "workflow_action_name": "Send"
+ }
+]

@@ -1,0 +1,188 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{}",
+  "letter_head": null,
+  "modified": "2026-02-11 15:02:13.076953",
+  "module": "HR",
+  "name": "Disciplinary action",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Disciplinary",
+  "reference_report": null,
+  "report_name": "Disciplinary action",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "parent": "Disciplinary action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Disciplinary action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Supervisor"
+   },
+   {
+    "parent": "Disciplinary action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Manager HRA"
+   },
+   {
+    "parent": "Disciplinary action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee"
+   },
+   {
+    "parent": "Disciplinary action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Director HRA"
+   },
+   {
+    "parent": "Disciplinary action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HRO Welfare"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-02-15 15:21:21.314835",
+  "module": "HR",
+  "name": "Employees on Disciplinary Action",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Disciplinary",
+  "reference_report": null,
+  "report_name": "Employees on Disciplinary Action",
+  "report_script": "# Report: Employees on Disciplinary Action\r\n# Type: Script Report\r\n\r\n\r\n\r\ndef execute(filters=None):\r\n    columns = get_columns()\r\n    data = get_data(filters)\r\n    return columns, data\r\n\r\ndef get_columns():\r\n    return [\r\n        {\r\n            \"fieldname\": \"employee\",\r\n            \"label\": _(\"Employee ID\"),\r\n            \"fieldtype\": \"Link\",\r\n            \"options\": \"Employee\",\r\n            \"width\": 120\r\n        },\r\n        {\r\n            \"fieldname\": \"employee_name\",\r\n            \"label\": _(\"Employee Name\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 180\r\n        },\r\n        {\r\n            \"fieldname\": \"department\",\r\n            \"label\": _(\"Department\"),\r\n            \"fieldtype\": \"Link\",\r\n            \"options\": \"Department\",\r\n            \"width\": 150\r\n        },\r\n        {\r\n            \"fieldname\": \"case_id\",\r\n            \"label\": _(\"Case ID\"),\r\n            \"fieldtype\": \"Link\",\r\n            \"options\": \"Disciplinary\",\r\n            \"width\": 120\r\n        },\r\n        {\r\n            \"fieldname\": \"offence_category\",\r\n            \"label\": _(\"Offence Category\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 180\r\n        },\r\n        {\r\n            \"fieldname\": \"specific_offence\",\r\n            \"label\": _(\"Specific Offence\"),\r\n            \"fieldtype\": \"Link\",\r\n            \"options\": \"Offence Master\",\r\n            \"width\": 200\r\n        },\r\n        {\r\n            \"fieldname\": \"breach_number\",\r\n            \"label\": _(\"Breach #\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 100\r\n        },\r\n        {\r\n            \"fieldname\": \"prescribed_sanction\",\r\n            \"label\": _(\"Sanction\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 180\r\n        },\r\n        {\r\n            \"fieldname\": \"workflow_state\",\r\n            \"label\": _(\"Status\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 150\r\n        },\r\n        {\r\n            \"fieldname\": \"warning_expiry_date\",\r\n            \"label\": _(\"Warning Expires\"),\r\n            \"fieldtype\": \"Date\",\r\n            \"width\": 120\r\n        },\r\n        {\r\n            \"fieldname\": \"is_active\",\r\n            \"label\": _(\"Warning Active\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 100\r\n        },\r\n        {\r\n            \"fieldname\": \"salary_withheld\",\r\n            \"label\": _(\"Salary Withheld\"),\r\n            \"fieldtype\": \"Data\",\r\n            \"width\": 120\r\n        }\r\n    ]\r\n\r\ndef get_data(filters):\r\n    conditions = get_conditions(filters)\r\n    \r\n    data = frappe.db.sql(f\"\"\"\r\n        SELECT \r\n            d.employee,\r\n            d.employee_name,\r\n            d.department,\r\n            d.name as case_id,\r\n            d.offence_category,\r\n            d.specific_offence,\r\n            d.breach_number,\r\n            d.prescribed_sanction,\r\n            d.workflow_state,\r\n            d.warning_expiry_date,\r\n            CASE \r\n                WHEN d.warning_expiry_date >= CURDATE() THEN 'Yes'\r\n                WHEN d.warning_expiry_date IS NULL THEN 'N/A'\r\n                ELSE 'Expired'\r\n            END as is_active,\r\n            CASE \r\n                WHEN d.prescribed_sanction LIKE '%Suspension%' \r\n                     AND d.workflow_state IN ('Final Decision', 'Pending CEO Approval')\r\n                THEN 'Yes'\r\n                ELSE 'No'\r\n            END as salary_withheld\r\n        FROM \r\n            `tabDisciplinary` d\r\n        WHERE \r\n            d.docstatus != 2\r\n            AND d.workflow_state NOT IN ('Closed', 'Case Closed', 'Cleared')\r\n            {conditions}\r\n        ORDER BY \r\n            d.creation DESC\r\n    \"\"\", as_dict=1)\r\n    \r\n    return data\r\n\r\ndef get_conditions(filters):\r\n    conditions = \"\"\r\n    \r\n    if filters.get(\"employee\"):\r\n        conditions += f\" AND d.employee = '{filters.get('employee')}'\"\r\n    \r\n    if filters.get(\"department\"):\r\n        conditions += f\" AND d.department = '{filters.get('department')}'\"\r\n    \r\n    if filters.get(\"offence_category\"):\r\n        conditions += f\" AND d.offence_category = '{filters.get('offence_category')}'\"\r\n    \r\n    if filters.get(\"show_suspended_only\"):\r\n        conditions += \" AND d.prescribed_sanction LIKE '%Suspension%'\"\r\n    \r\n    if filters.get(\"show_active_warnings_only\"):\r\n        conditions += \" AND d.warning_expiry_date >= CURDATE()\"\r\n    \r\n    return conditions",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Employees on Disciplinary Action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Employees on Disciplinary Action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Supervisor"
+   },
+   {
+    "parent": "Employees on Disciplinary Action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Manager HRA"
+   },
+   {
+    "parent": "Employees on Disciplinary Action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee"
+   },
+   {
+    "parent": "Employees on Disciplinary Action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Director HRA"
+   },
+   {
+    "parent": "Employees on Disciplinary Action",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HRO Welfare"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-09-10 11:40:07.050398",
+  "module": "HR",
+  "name": "Active Employee Warnings",
+  "prepared_report": 0,
+  "query": "SELECT\n    d.employee              AS \"Employee:Link/Employee:110\",\n    d.employee_name         AS \"Name:Data:170\",\n    d.name                  AS \"Case:Link/Disciplinary:120\",\n    dc.specific_offence     AS \"Offence:Data:200\",\n    dc.breach_number        AS \"Breach:Data:85\",\n    dc.prescribed_sanction  AS \"Sanction:Data:170\",\n    d.custom_closed_on      AS \"Issued On:Date:95\",\n    dc.warning_expiry_date  AS \"Expires On:Date:95\",\n    DATEDIFF(dc.warning_expiry_date, CURDATE()) AS \"Days Left:Int:80\"\nFROM `tabDisciplinary Charges` dc\nINNER JOIN `tabDisciplinary` d ON d.name = dc.parent\nWHERE d.workflow_state = 'Case Closed'\n  AND dc.warning_expiry_date IS NOT NULL\n  AND dc.warning_expiry_date >= CURDATE()\nORDER BY d.employee_name, dc.warning_expiry_date",
+  "ref_doctype": "Disciplinary",
+  "reference_report": null,
+  "report_name": "Active Employee Warnings",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Active Employee Warnings",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Active Employee Warnings",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Manager HRA"
+   },
+   {
+    "parent": "Active Employee Warnings",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HRO Welfare"
+   },
+   {
+    "parent": "Active Employee Warnings",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Director HRA"
+   },
+   {
+    "parent": "Active Employee Warnings",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Supervisor"
+   },
+   {
+    "parent": "Active Employee Warnings",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ }
+]

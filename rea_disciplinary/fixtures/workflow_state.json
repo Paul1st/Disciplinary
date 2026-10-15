@@ -1,0 +1,227 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2025-09-28 12:14:37.518323",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2025-09-28 12:14:37.523575",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-08 04:55:49.763988",
+  "name": "Draft",
+  "style": "Warning",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-28 17:05:38.131069",
+  "name": "Pending Supervisor Approval",
+  "style": "Warning",
+  "workflow_state_name": "Pending Supervisor Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-28 17:06:35.994630",
+  "name": "Pending CEO Approval",
+  "style": "Warning",
+  "workflow_state_name": "Pending CEO Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-09 09:32:13.804302",
+  "name": "Pending HOD Approval",
+  "style": "Warning",
+  "workflow_state_name": "Pending HOD Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-08 14:35:53.410098",
+  "name": "Pending Manager HR Approval",
+  "style": "",
+  "workflow_state_name": "Pending Manager HR Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-16 11:45:00.420514",
+  "name": "Awaiting Exculpation",
+  "style": "",
+  "workflow_state_name": "Awaiting Exculpation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-21 11:35:09.283792",
+  "name": "Issue Charge",
+  "style": "",
+  "workflow_state_name": "Issue Charge"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 14:19:31.179593",
+  "name": "Exculpation Evaluation",
+  "style": "Primary",
+  "workflow_state_name": "Exculpation Evaluation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-21 12:05:00.894270",
+  "name": "Recommendation of Charge",
+  "style": "",
+  "workflow_state_name": "Recommendation of Charge"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-21 15:54:05.147465",
+  "name": "Recommend Disciplinary Hearing",
+  "style": "",
+  "workflow_state_name": "Recommend Disciplinary Hearing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 12:05:34.292012",
+  "name": "Hearing Outcome",
+  "style": "Warning",
+  "workflow_state_name": "Hearing Outcome"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 10:24:38.379758",
+  "name": "Case Closed",
+  "style": "Success",
+  "workflow_state_name": "Case Closed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-10-21 16:23:22.082365",
+  "name": "Set Hearing Date",
+  "style": "",
+  "workflow_state_name": "Set Hearing Date"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-12-09 11:44:15.143807",
+  "name": "Awaiting Employee Decision",
+  "style": "",
+  "workflow_state_name": "Awaiting Employee Decision"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 10:17:20.321399",
+  "name": "Charge",
+  "style": "",
+  "workflow_state_name": "Charge"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 10:26:15.825450",
+  "name": "Disciplinary Committee",
+  "style": "",
+  "workflow_state_name": "Disciplinary Committee"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 10:36:23.824640",
+  "name": "Issue Warning",
+  "style": "",
+  "workflow_state_name": "Issue Warning"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 10:45:11.634029",
+  "name": "Appeal Outcome",
+  "style": "",
+  "workflow_state_name": "Appeal Outcome"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 10:48:24.126501",
+  "name": "Pending Outcome Approval",
+  "style": "",
+  "workflow_state_name": "Pending Outcome Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-05-18 15:28:47.791956",
+  "name": "Set Appeal Date",
+  "style": "",
+  "workflow_state_name": "Set Appeal Date"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-02 14:56:35.754094",
+  "name": "Grounds for Appeal",
+  "style": "Info",
+  "workflow_state_name": "Grounds for Appeal"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-02 15:02:18.729649",
+  "name": "Appeal Under Review",
+  "style": "",
+  "workflow_state_name": "Appeal Under Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-02 15:22:39.271335",
+  "name": "Appeal Requested",
+  "style": "",
+  "workflow_state_name": "Appeal Requested"
+ }
+]
